@@ -30,7 +30,7 @@
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="com.outsystems.nfc/uri" android:host="test" android:scheme="com.outsystemsenterprise.certissecuritydev.TestReadNfc" />
+                <data  android:host="test" android:scheme="com.outsystemsenterprise.certissecuritydev.TestReadNfc" />
             </intent-filter>
         </config-file>
 
