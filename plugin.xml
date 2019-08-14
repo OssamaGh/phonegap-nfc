@@ -33,7 +33,7 @@
         </config-file>
         
         <config-file target="AndroidManifest.xml" parent="/manifest">
-            <activity android:name="com.outsystemsenterprise.certissecuritydev.TestBinaryMobile.MainActivity1" android:label="MainActivity1">
+            <activity android:name=".MainActivity" android:label="MainActivity">
                 <intent-filter>
                     <action android:name="android.nfc.action.NDEF_DISCOVERED" />
                     <category android:name="android.intent.category.DEFAULT" />
