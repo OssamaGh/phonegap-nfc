@@ -24,11 +24,6 @@
                 <param name="android-package" value="com.chariotsolutions.nfc.plugin.NfcPlugin"/>
                 <param name="onload" value="true" />
             </feature>
-            <intent-filter>
-                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="com.outsystems.nfc/uri" />
-            </intent-filter>
             
         </config-file>
         
@@ -36,6 +31,17 @@
             <uses-permission android:name="android.permission.NFC"/>
             <uses-feature android:name="android.hardware.nfc" android:required="false"/>
         </config-file>
+        
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+             <activity android:name="com.chariotsolutions.nfc.plugin.NfcPlugin" android:launchMode="singleTop">
+                   <intent-filter>
+                    <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <data android:mimeType="com.outsystems.nfc/uri" />
+                </intent-filter>
+             </activity>
+        </config-file>
+        
         
         <source-file src="src/android/src/com/chariotsolutions/nfc/plugin/NfcPlugin.java"
             target-dir="src/com/chariotsolutions/nfc/plugin"/>
