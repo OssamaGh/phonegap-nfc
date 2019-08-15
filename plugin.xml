@@ -28,12 +28,9 @@
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
             <intent-filter>
-                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <action android:name="android.nfc.action.TECH_DISCOVERED"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="uri"
-                    android:host="com.outsystems.nfc"
-                    android:pathPrefix="/DeepLink/TestScreen?Param=Ossama"
-                />
+                <data android:mimeType="com.outsystems.nfc/uri" />
             </intent-filter>
         </config-file>
 
