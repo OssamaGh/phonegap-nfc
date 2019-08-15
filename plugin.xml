@@ -30,10 +30,9 @@
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="com.outsystems.nfc/uri"
-                    android:scheme="vnd.android.nfc"
-                    android:host="ext"
-                    android:pathPrefix="/com.outsystems.nfc"
+                <data android:scheme="uri"
+                    android:host="com.outsystems.nfc"
+                    android:pathPrefix="/DeepLink/TestScreen?Param=Ossama"
                 />
             </intent-filter>
         </config-file>
