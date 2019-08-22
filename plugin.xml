@@ -27,22 +27,15 @@
 
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
-            
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:scheme="com.outsystems.nfc"
-              android:host="/DeepLink/TestScreen"
-               />            
-            </intent-filter>
-
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="com.outsystems.nfc/uri"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:mimeType="com.outsystems.nfc/uri" 
+                    android:scheme="com.outsystems.nfc"
+                    android:host="/DeepLink/TestScreen"
+               />            
             </intent-filter>
-            
         </config-file>
 
         <source-file src="src/android/src/com/chariotsolutions/nfc/plugin/NfcPlugin.java"
